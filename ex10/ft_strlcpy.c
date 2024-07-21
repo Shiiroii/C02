@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:35:37 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/20 14:32:26 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 11:26:43 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (ft_strlen(dest));
 }
+
+// ---------------------------------------
 
 #include <stdio.h>
 

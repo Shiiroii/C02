@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 11:53:37 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/18 11:59:55 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 11:26:08 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	dest[i] = '\0';
 	return (dest);
 }
+
+// ---------------------------------------
 
 #include <stdio.h>
 #include <string.h>

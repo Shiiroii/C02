@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 16:07:39 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/20 17:37:36 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 11:21:40 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	hexa = "0123456789abcdef";
 	if (size > 0)
 	{
-
+		
 	}
 }
 
