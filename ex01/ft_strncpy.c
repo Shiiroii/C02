@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 11:53:37 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/21 14:15:45 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 16:14:04 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
@@ -52,10 +52,10 @@ int	main(void)
 	char	*str;
 
 	str = "Salut Salut Salut";
-	char	a[ft_strlen(str)];
-	ft_strncpy(a, str, 4);
-	char	b[ft_strlen(str)];
-	strncpy(b, str, 4);
+	char	a[40];
+	ft_strncpy(a, str, 40);
+	char	b[40];
+	strncpy(b, str, 40);
 	printf("ft_strncpy : %s\n", a);
 	printf("strncpy : %s", b);
 }
