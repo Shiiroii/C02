@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:44:28 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/21 11:26:14 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 11:27:16 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_str_is_numeric(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
 			return (0);

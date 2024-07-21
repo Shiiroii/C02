@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 16:34:50 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/21 11:26:27 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 11:27:26 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strupcase(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 			str[i] -= 32;

@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:51:59 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/21 11:26:23 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 11:27:24 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_str_is_printable(char *str)
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		if (!(str[i] >= 32 && str[i] != 127))
 			return (0);
