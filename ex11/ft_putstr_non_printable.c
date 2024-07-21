@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 13:25:20 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/21 11:26:47 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/21 14:42:18 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	print_in_hexadecimal(int nb)
 	char	*hexa;
 
 	hexa = "0123456789abcdef";
-	if (nb > 16)
+	if (nb >= 16)
 	{
-		print_in_hexadecimal(nb / 10);
-		print_in_hexadecimal(nb % 10);
+		print_in_hexadecimal(nb / 16);
+		print_in_hexadecimal(nb % 16);
 	}
 	else
 	{
