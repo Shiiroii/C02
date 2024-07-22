@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 13:25:20 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/21 14:42:18 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/22 12:43:22 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,14 @@ int	main(void)
 	ft_putstr_non_printable(str);
 	ft_putchar('\n');
 	return (0);
+}
+
+
+
+int main()
+{
+	char str[] = "test";
+	
+	ft_strupcase(str);
+	printf("%s", str);
 }
