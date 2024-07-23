@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 13:25:20 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/22 12:43:22 by liulm            ###   ########.fr       */
+/*   Updated: 2024/07/24 00:44:25 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,13 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	print_in_hexadecimal(int nb)
+void	print_in_hexadecimal(unsigned char c)
 {
 	char	*hexa;
 
 	hexa = "0123456789abcdef";
-	if (nb >= 16)
-	{
-		print_in_hexadecimal(nb / 16);
-		print_in_hexadecimal(nb % 16);
-	}
-	else
-	{
-		ft_putchar(hexa[nb]);
-	}
+	ft_putchar(hexa[c / 16]);
+	ft_putchar(hexa[c % 16]);
 }
 
 void	ft_putstr_non_printable(char *str)
@@ -40,18 +33,14 @@ void	ft_putstr_non_printable(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 32 && str[i] <= 126)
-		{
-			ft_putchar(str[i]);
-		}
-		if ((str[i] >= 0 && str[i] <= 31) || (str[i] == 127))
+		if (str[i] < ' ' || str[i] == 127)
 		{
 			ft_putchar('\\');
-			if (str[i] < 16)
-			{
-				ft_putchar('0');
-			}
 			print_in_hexadecimal(str[i]);
+		}
+		else
+		{
+			ft_putchar(str[i]);
 		}
 		i++;
 	}
@@ -66,14 +55,4 @@ int	main(void)
 	ft_putstr_non_printable(str);
 	ft_putchar('\n');
 	return (0);
-}
-
-
-
-int main()
-{
-	char str[] = "test";
-	
-	ft_strupcase(str);
-	printf("%s", str);
 }
