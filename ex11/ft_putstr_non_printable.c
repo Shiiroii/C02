@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	print_in_hexadecimal(char c)
+void	print_in_hexadecimal(int c)
 {
 	char	*hexa;
 
