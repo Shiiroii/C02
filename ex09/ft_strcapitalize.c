@@ -6,11 +6,11 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 16:44:29 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/24 00:37:37 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/08/01 10:39:16 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcapitalize(char *str)
+/*char	*ft_strcapitalize(char *str)
 {
 	int	i;
 
@@ -37,8 +37,23 @@ char	*ft_strcapitalize(char *str)
 		i++;
 	}
 	return (str);
-}
+}*/
 
+char	*ft_strcapitalize(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 32;
+		if ((str[i] >= 'a' && str[i] <= 'z') && str[i - 1] <= 47)
+			str[i] -= 32;
+		i++;
+	}
+	return (str);
+}
 // ---------------------------------------
 
 #include <stdio.h>

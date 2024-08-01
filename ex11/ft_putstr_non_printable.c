@@ -6,7 +6,7 @@
 /*   By: lionelulm <lionelulm@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 13:25:20 by liulm             #+#    #+#             */
-/*   Updated: 2024/07/24 00:44:25 by lionelulm        ###   ########.fr       */
+/*   Updated: 2024/08/01 10:47:15 by lionelulm        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,21 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	print_in_hexadecimal(unsigned char c)
+void	print_in_hexadecimal(char c)
 {
 	char	*hexa;
 
 	hexa = "0123456789abcdef";
-	ft_putchar(hexa[c / 16]);
-	ft_putchar(hexa[c % 16]);
+	if (c >= 16)
+	{
+		ft_putchar(hexa[c / 16]);
+		ft_putchar(hexa[c % 16]);
+	}
+	else
+	{
+		ft_putchar('0');
+		ft_putchar(hexa[c]);
+	}
 }
 
 void	ft_putstr_non_printable(char *str)
